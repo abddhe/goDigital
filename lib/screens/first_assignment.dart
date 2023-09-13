@@ -61,7 +61,7 @@ class FirstAssignment extends StatelessWidget {
                       color: Colors.white,
                     ),
                     Icon(
-                      Icons.point_of_sale_sharp,
+                      Icons.more_vert,
                       color: Colors.white,
                     ),
                   ],
