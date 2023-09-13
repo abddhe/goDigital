@@ -4,4 +4,4 @@
 
 - Assignment #1
 
-![Abdullah Ashraf Dheir](/screenshots/assignment 1/1.png "Assignment #1 - 1")
+![Abdullah Ashraf Dheir](/screenshots/assignment_1/1.png "Assignment #1 - 1")
