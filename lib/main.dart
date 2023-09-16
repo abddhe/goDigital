@@ -1,4 +1,4 @@
-import 'package:first_project/screens/first_assignment.dart';
+import 'package:first_project/assignment_2/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'First Project',
-      home: FirstAssignment(),
+      home: HomeScreen(),
     );
   }
 }
