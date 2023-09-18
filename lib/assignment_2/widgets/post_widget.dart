@@ -1,6 +1,6 @@
 import 'package:first_project/assignment_2/models/post_model.dart';
 import 'package:first_project/assignment_2/widgets/buttons/like_button.dart';
-import 'package:first_project/assignment_2/widgets/post_author_widget.dart';
+import 'package:first_project/assignment_2/widgets/author_widget.dart';
 import 'package:flutter/material.dart';
 
 class PostWidget extends StatefulWidget {
@@ -14,15 +14,17 @@ class PostWidget extends StatefulWidget {
 
 class _PostWidgetState extends State<PostWidget> {
   late int commentsCount;
+
   @override
   void initState() {
     commentsCount = widget.postModel.comments.length;
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 20),
+      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
       child: Card(
         clipBehavior: Clip.antiAlias,
         shape: RoundedRectangleBorder(
@@ -35,7 +37,7 @@ class _PostWidgetState extends State<PostWidget> {
               children: [
                 SizedBox(
                   width: double.infinity,
-                  height: 150,
+                  height: 250,
                   child: Image.network(
                     widget.postModel.image,
                     fit: BoxFit.cover,
@@ -51,7 +53,11 @@ class _PostWidgetState extends State<PostWidget> {
                     ),
                   ),
                 ),
-                PositionedDirectional(start: 10,top: 10,child: PostAuthorWidget(user: widget.postModel.user),),
+                PositionedDirectional(
+                  start: 10,
+                  top: 10,
+                  child: AuthorWidget(user: widget.postModel.user),
+                ),
               ],
             ),
             Padding(
@@ -59,7 +65,10 @@ class _PostWidgetState extends State<PostWidget> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  LikeButton(isLiked: widget.postModel.isLiked),
+                  LikeButton(
+                    isLiked: widget.postModel.isLiked,
+                    comments: widget.postModel.comments,
+                  ),
                   Text("$commentsCount Comments"),
                 ],
               ),
