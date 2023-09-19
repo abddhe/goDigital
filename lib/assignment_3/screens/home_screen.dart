@@ -28,7 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
   incrementItemQuantity() {
     setState(() {
       itemQuantity++;
-      cartPrice += itemModel.price * itemQuantity;
+      cartPrice += itemModel.price ;
     });
   }
 
@@ -36,7 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
     setState(() {
       if (cartPrice > 0 && itemQuantity > 1) {
         itemQuantity--;
-        cartPrice -= itemModel.price * itemQuantity;
+        cartPrice -= itemModel.price ;
       }
     });
   }
