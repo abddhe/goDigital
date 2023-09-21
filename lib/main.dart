@@ -1,4 +1,4 @@
-import 'package:first_project/assignment_3/screens/home_screen.dart';
+import 'package:first_project/assignment_4/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         Locale('ar'), // Spanish
       ],
       debugShowCheckedModeBanner: false,
-      locale: Locale('ar'),
+      locale: Locale('en'),
       title: 'First Project',
       home: HomeScreen(),
     );
